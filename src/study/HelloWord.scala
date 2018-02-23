@@ -1,6 +1,6 @@
 package study
 
-object HelloWorld {
+object HelloWord {
   def main(args: Array[String]){
     System.out.print("Hello Word")
   }
