@@ -17,12 +17,16 @@ object DataFrameTest {
   import spark.implicits._
 
   case class Person(name: String, age: Long)
-
+  // txt 转化为 dataframe
   val peopleDF = spark.sparkContext.textFile("BigData.txt")
     .map(_.split(","))
     .map(row => Person(row(0), row(1).trim.toInt))
     .toDF()
+
+  //dataframe 注册为临时表
   peopleDF.createOrReplaceTempView("people")
+
+  // 查询
   val teenagersDF = spark.sql("SELECT name, age FROM people")
   teenagersDF.show()
   teenagersDF.map(teenager => "Name: " + teenager(0)).show()
