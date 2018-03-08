@@ -2,9 +2,10 @@ package sparkScala
 
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
+import org.apache.log4j.{Level, Logger}
 
 object HourAppSum {
-  //Logger.getLogger("org").setLevel(Level.ERROR)
+  Logger.getLogger("org").setLevel(Level.ERROR)
   val conf = new SparkConf().setAppName("test").setMaster("local")
   val spark = SparkSession.builder
     .enableHiveSupport()
@@ -29,9 +30,12 @@ object HourAppSum {
   // 查询
   val teenagersDF = spark.sql("SELECT * FROM python_hour a right join hour b on a.channel_id=b.channel_id and a.is_channel=b.is_channel and a.hour =b.hour where a.hour is null")
   teenagersDF.show()
+  teenagersDF.filter("hour>10").show()
+  teenagersDF.where("hour=14").show()
+  teenagersDF.groupBy("channel_id").agg("hour"-> "sum").show()
   //teenagersDF.map(teenager => "Name: " + teenager(0)).show()
+  teenagersDF.withColumn("bb",teenagersDF("hour")).show()
   def main(args:Array[String]):Unit={
     println(11111)
   }
-
 }
