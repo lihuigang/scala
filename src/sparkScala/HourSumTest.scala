@@ -6,7 +6,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.log4j.{Level, Logger}
 
 object HourSumTes {
-  Logger.getLogger("org").setLevel(Level.ERROR)
+  Logger.getLogger("org").setLevel(Level.INFO)
   val conf = new SparkConf().setAppName("test").setMaster("local")
   val spark = SparkSession.builder
     .enableHiveSupport()
