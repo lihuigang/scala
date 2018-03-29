@@ -1,7 +1,5 @@
 package sparkScala
 
-package sparkScala
-
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.hive.HiveContext
@@ -48,7 +46,7 @@ object UdafTest {
 
     //while(true){}
 
-    hiveContext.udf.register("wordCount",new MyUDAF)
+    hiveContext.udf.register("wordCount",new UdafTest)
     hiveContext.sql("select name,wordCount(name) as count,computeLength(name) as length from bigDataTable group by name ").show
   }
 }
@@ -56,7 +54,7 @@ object UdafTest {
 /**
   * 用户自定义函数
   */
-class MyUDAF extends UserDefinedAggregateFunction
+class UdafTest extends UserDefinedAggregateFunction
 {
   /**
     * 指定具体的输入数据的类型

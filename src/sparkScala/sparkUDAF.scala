@@ -18,7 +18,7 @@ import org.apache.log4j.{Level, Logger}
   * UDF: 函数的输入是一条具体的数据记录，实现上讲就是普通的scala函数-只不过需要注册
   * UDAF：用户自定义的聚合函数，函数本身作用于数据集合，能够在具体操作的基础上进行自定义操作
   */
-object SparkSQLUDF {
+object sparkUDAF {
 
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org").setLevel(Level.ERROR)
@@ -46,7 +46,7 @@ object SparkSQLUDF {
 
     //while(true){}
 
-    hiveContext.udf.register("wordCount",new MyUDAF)
+    hiveContext.udf.register("wordCount",new sparkUDAF)
     hiveContext.sql("select name,wordCount(name) as count,computeLength(name) as length from bigDataTable group by name ").show
   }
 }
@@ -54,7 +54,7 @@ object SparkSQLUDF {
 /**
   * 用户自定义函数
   */
-class MyUDAF extends UserDefinedAggregateFunction
+class sparkUDAF extends UserDefinedAggregateFunction
 {
   /**
     * 指定具体的输入数据的类型
@@ -82,7 +82,7 @@ class MyUDAF extends UserDefinedAggregateFunction
   /**
     * Initializes the given aggregation buffer
     */
-  override def initialize(buffer:MutableAggregationBuffer):Unit = {buffer(0)=0}
+  override def initialize(buffer:MutableAggregationBuffer):Unit = {buffer(0)=Array(0)}
 
   /**
     * 在进行聚合的时候，每当有新的值进来，对分组后的聚合如何进行计算

@@ -1,2 +1,6 @@
-lihuigang,22
-tom,24
+lihuigang,1
+lihuigang,2
+lihuigang,0
+tom,6
+lihuigang,3
+tom,4

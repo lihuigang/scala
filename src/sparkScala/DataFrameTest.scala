@@ -2,9 +2,10 @@ package sparkScala
 
 
 import org.apache.spark.sql.types._
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction}
 
 object DataFrameTest {
   //Logger.getLogger("org").setLevel(Level.ERROR)
@@ -35,3 +36,4 @@ object DataFrameTest {
   }
 
 }
+
