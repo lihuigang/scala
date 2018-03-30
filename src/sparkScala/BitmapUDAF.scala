@@ -57,14 +57,12 @@ object BitmapUDAF {
   */
 class BitmapUDAF extends UserDefinedAggregateFunction
 {
-  var bitmap = new Bitmap(2000000)
-  var list = bitmap.array
+
   override def inputSchema:StructType = StructType(Array(StructField("name",IntegerType,true)))
   override def bufferSchema:StructType = StructType(Array(StructField("count",StringType,true)))
   override def dataType:DataType = StringType
-  override def deterministic:Boolean = true
   override def initialize(buffer:MutableAggregationBuffer):Unit = {
-    buffer(0)=to_string(list)
+    buffer(0)=to_string(new Array[Int](20000))
   }
 
   override def update(buffer:MutableAggregationBuffer,input:Row):Unit={
