@@ -1,6 +1,7 @@
 package sparkScala
 
 import org.apache.spark.{SparkConf, SparkContext}
+import org.apache.spark.SparkConf
 object BigDataAnalytics {
   def main (args:Array[String]): Unit ={
     var conf =new SparkConf().setAppName("appname").setMaster("local")

@@ -13,7 +13,7 @@ import org.apache.spark.sql.types.{ArrayType,MapType,StructType}
 import org.apache.spark.sql.types.DataType
 import org.apache.spark.sql.expressions.MutableAggregationBuffer
 import org.apache.log4j.{Level, Logger}
-import sparkScala.Bitmaptransform.{to_array,to_string,to_bitmap,user,merge,count,StrMerge,addEleToBitmap}
+import sparkScala.Bitmaptransform._
 
 /**
   * Spark SQL UDAS：user defined aggregation function
@@ -42,8 +42,19 @@ object BitmapUDAF {
   peopleDF.createOrReplaceTempView("people")
 
   // 查询
-  spark.udf.register("bitmap",new BitmapUDAF)
-  val teenagersDF = spark.sql("SELECT name,bitmap(age) FROM people group by name ")
+  spark.udf.register("bitmap",new ToBitmap)
+  spark.udf.register("merge", new BitmapMerge)
+  var sql =
+    """
+      | SELECT
+      |   name,
+      |   bitmap(age) as bitmap
+      | FROM
+      |   people
+      | group by name
+      |
+    """.stripMargin
+  val teenagersDF = spark.sql(sql)
   teenagersDF.show()
   //teenagersDF.map(teenager => "Name: " + teenager(0)).show()
   def main(args:Array[String]):Unit={
@@ -55,23 +66,48 @@ object BitmapUDAF {
 /**
   * 用户自定义函数
   */
-class BitmapUDAF extends UserDefinedAggregateFunction
+class ToBitmap extends UserDefinedAggregateFunction
 {
 
   override def inputSchema:StructType = StructType(Array(StructField("name",IntegerType,true)))
-  override def bufferSchema:StructType = StructType(Array(StructField("count",StringType,true)))
-  override def dataType:DataType = StringType
+  override def bufferSchema:StructType = StructType(Array(StructField("count",ArrayType(IntegerType),true)))
+  override def dataType:DataType = ArrayType(IntegerType)
   override def initialize(buffer:MutableAggregationBuffer):Unit = {
-    buffer(0)=to_string(new Array[Int](20000))
+    buffer(0)=new Array[Int](1)
   }
 
+  override def deterministic:Boolean = true
+
   override def update(buffer:MutableAggregationBuffer,input:Row):Unit={
-    buffer(0) = to_string(addEleToBitmap(to_array(buffer.getString(0)),input.getInt(0)))
+    //println(buffer.getAs[Seq[Int]](0).toArray)
+    buffer(0) = addEleToBitmap(buffer.getAs[Seq[Int]](0).toArray,input.getInt(0))
   }
 
   override def merge(buffer1:MutableAggregationBuffer,buffer2:Row):Unit={
     //println(buffer1.getString(0),buffer2.getString(0))
-    buffer1(0) = StrMerge(buffer1.getString(0),buffer2.getString(0))
+    buffer1(0) = BitmapArrayMerge(buffer1.getAs[Seq[Int]](0).toArray,buffer2.getAs[Seq[Int]](0).toArray)
   }
-  override def evaluate(buffer:Row):Any = buffer.getString(0)
+  override def evaluate(buffer:Row):Any = buffer.get(0)
+}
+
+class BitmapMerge extends UserDefinedAggregateFunction
+{
+
+  override def inputSchema:StructType = StructType(Array(StructField("name",ArrayType(IntegerType),true)))
+  override def bufferSchema:StructType = StructType(Array(StructField("count",ArrayType(IntegerType),true)))
+  override def dataType:DataType = ArrayType(IntegerType)
+  override def initialize(buffer:MutableAggregationBuffer):Unit = {
+    buffer(0)=new Array[Int](0)
+  }
+
+  override def deterministic:Boolean = true
+
+  override def update(buffer:MutableAggregationBuffer,input:Row):Unit={
+    buffer(0) = input.getAs[Seq[Int]](0).toArray
+  }
+
+  override def merge(buffer1:MutableAggregationBuffer,buffer2:Row):Unit={
+    buffer1(0) = BitmapArrayMerge(buffer1.getAs[Seq[Int]](0).toArray,buffer2.getAs[Seq[Int]](0).toArray)
+  }
+  override def evaluate(buffer:Row):Any = buffer.get(0)
 }

@@ -1,16 +1,28 @@
 package sparkScala
 
 import scala.collection.mutable.ArrayBuffer
+import java.lang._
 
 
 object Bitmaptransform {
-  def merge(A: Array[Int], B: Array[Int]): Array[Int] = {
-    if (A.length > 0) {
-      for (i <- 0 to A.length-1) {
-        B(i) = B(i) | A(i)
+  def BitmapArrayMerge(BitmapArrayA: Array[Int], BitmapArrayB: Array[Int]): Array[Int] = {
+
+    var MaxArray=BitmapArrayA
+    var MinArray=BitmapArrayB
+
+    if (BitmapArrayA.length <= BitmapArrayB.length){
+      MaxArray = BitmapArrayB
+      MinArray = BitmapArrayA
+    }
+
+    for (i <- 0 to MaxArray.length-1) {
+      if(i <= MinArray.length-1){
+        MaxArray(i) = MaxArray(i) | MinArray(i)
+      }else {
+        return MaxArray
       }
     }
-    return B
+    return MaxArray
   }
 
   def StrMerge(A: String, B:String): String = {
@@ -24,11 +36,18 @@ object Bitmaptransform {
     return to_string(array_B)
   }
 
-  def inter(A: Array[Int], B: Array[Int]): Array[Int] = {
-    for (i <- 0 to A.length-1) {
-      B(i) = B(i) & A(i)
+  def inter(BitmapArrayA: Array[Int], BitmapArrayB: Array[Int]): Array[Int] = {
+    var MaxArray=BitmapArrayA
+    var MinArray=BitmapArrayB
+
+    if (BitmapArrayA.length <= BitmapArrayB.length){
+      MaxArray = BitmapArrayB
+      MinArray = BitmapArrayA
     }
-    return B
+    for (i <- 0 to MinArray.length-1) {
+      MinArray(i) = MaxArray(i) & MinArray(i)
+    }
+    return MinArray
   }
 
   def count(A: Array[Int]): Int = {
@@ -45,7 +64,7 @@ object Bitmaptransform {
   def user(list: Array[Int]): Array[Int] = {
     var result = ArrayBuffer[Int]()
     var MAX = list.length * 31
-    var bitmap = new Bitmap(MAX)
+    var bitmap = new Bitmap()
     bitmap.array = list
     for (i <- 0 to MAX) {
       if (bitmap.test(i)) {
@@ -80,8 +99,8 @@ object Bitmaptransform {
     return bitmap_string
   }
 
-  def to_bitmap(array: Array[Int], MAX: Int): Array[Int] = {
-    var bitmap = new Bitmap(MAX)
+  def to_bitmap(array: Array[Int]): Array[Int] = {
+    var bitmap = new Bitmap()
     for (i <- array) {
       bitmap.set(i)
     }
@@ -89,17 +108,18 @@ object Bitmaptransform {
   }
 
   def addEleToBitmap(bitmapArray:Array[Int],num:Int): Array[Int] ={
-    var bitmap = new Bitmap(bitmapArray.length-1)
+    var bitmap = new Bitmap()
     bitmap.array=bitmapArray
     bitmap.set(num)
     return bitmap.array
   }
 
   def main(args:Array[String]): Unit ={
-    var bt = new Bitmap(1)
+    var bt = new Bitmap()
     //println (to_string(bt.array))
-    bt.set(1)
-    print("-----")
+    var a = 0
+    bt.set(a)
+    println("-----")
     println (to_string(bt.array))
   }
 
