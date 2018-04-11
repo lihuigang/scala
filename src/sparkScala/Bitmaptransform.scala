@@ -107,10 +107,10 @@ object Bitmaptransform {
     return bitmap.array
   }
 
-  def addEleToBitmap(bitmapArray:Array[Int],num:Int): Array[Int] ={
+  def addEleToBitmap(bitmapArray:Array[Int],num:String): Array[Int] ={
     var bitmap = new Bitmap()
     bitmap.array=bitmapArray
-    bitmap.set(num)
+    bitmap.set(num.toLong)
     return bitmap.array
   }
 

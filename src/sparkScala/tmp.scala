@@ -58,7 +58,7 @@ object tmp {
 class tmp extends UserDefinedAggregateFunction
 {
 
-  override def inputSchema:StructType = StructType(Array(StructField("name",IntegerType,true)))
+  override def inputSchema:StructType = StructType(Array(StructField("name",StringType,true)))
   override def bufferSchema:StructType = StructType(Array(StructField("count",ArrayType(IntegerType),true)))
   override def dataType:DataType = StringType
   override def initialize(buffer:MutableAggregationBuffer):Unit = {
@@ -68,7 +68,7 @@ class tmp extends UserDefinedAggregateFunction
   override def deterministic:Boolean = true
 
   override def update(buffer:MutableAggregationBuffer,input:Row):Unit={
-    buffer(0) = to_string(addEleToBitmap(to_array(buffer.getString(0)),input.getInt(0)))
+    buffer(0) = to_string(addEleToBitmap(to_array(buffer.getString(0)),input.getString(0)))
   }
 
   override def merge(buffer1:MutableAggregationBuffer,buffer2:Row):Unit={

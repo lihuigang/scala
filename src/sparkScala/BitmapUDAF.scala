@@ -31,11 +31,11 @@ object BitmapUDAF {
 
   import spark.implicits._
 
-  case class Person(name: String, age: Long)
+  case class Person(name: String, age: String)
   // txt 转化为 dataframe
   val peopleDF = spark.sparkContext.textFile("BigData.txt")
     .map(_.split(","))
-    .map(row => Person(row(0), row(1).trim.toInt))
+    .map(row => Person(row(0), row(1).trim.toString))
     .toDF()
 
   //dataframe 注册为临时表
@@ -69,7 +69,7 @@ object BitmapUDAF {
 class ToBitmap extends UserDefinedAggregateFunction
 {
 
-  override def inputSchema:StructType = StructType(Array(StructField("name",IntegerType,true)))
+  override def inputSchema:StructType = StructType(Array(StructField("name",StringType,true)))
   override def bufferSchema:StructType = StructType(Array(StructField("count",ArrayType(IntegerType),true)))
   override def dataType:DataType = ArrayType(IntegerType)
   override def initialize(buffer:MutableAggregationBuffer):Unit = {
@@ -80,7 +80,7 @@ class ToBitmap extends UserDefinedAggregateFunction
 
   override def update(buffer:MutableAggregationBuffer,input:Row):Unit={
     //println(buffer.getAs[Seq[Int]](0).toArray)
-    buffer(0) = addEleToBitmap(buffer.getAs[Seq[Int]](0).toArray,input.getInt(0))
+    buffer(0) = addEleToBitmap(buffer.getAs[Seq[Int]](0).toArray,input.getString(0))
   }
 
   override def merge(buffer1:MutableAggregationBuffer,buffer2:Row):Unit={

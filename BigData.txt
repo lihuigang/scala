@@ -1,5 +1,5 @@
 lihuigang,1
 lihuigang,2
 lihuigang,0
-tom,2100000000
+tom,22000
 lihuigang,3
