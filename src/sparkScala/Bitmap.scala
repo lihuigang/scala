@@ -24,7 +24,6 @@ class Bitmap() extends Serializable{
       ArrayBuferTest ++= new Array[Int](elemIndex-array.length+1)
       array = ArrayBuferTest.toArray
     }
-    print(num,elemIndex,array.length)
     var elem = array(elemIndex)
     var value= elem | (1 << byteIndex)
     array(elemIndex) = value

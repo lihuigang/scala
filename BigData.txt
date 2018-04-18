@@ -1,5 +1,10 @@
+lihuigang,5
 lihuigang,1
 lihuigang,2
-lihuigang,0
-tom,22000
-lihuigang,3
+tom,5
+qq,5
+aa,5
+bb,5
+cc,5
+cc,25000000
+cc,1

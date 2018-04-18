@@ -35,7 +35,8 @@ object WeiXin {
     bigDataDF.createTempView("user_tmp")
     //bigDataDF.registerTempTable("bigDataTable")
     var rdd = spark.sql("select name from user_tmp")
-
+    var a = 111
+    print (a)
 
   }
 
