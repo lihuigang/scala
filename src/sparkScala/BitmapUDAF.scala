@@ -1,10 +1,7 @@
 package sparkScala
 
-import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.sql.{Row, SQLContext, SparkSession}
-import org.apache.spark.sql.types.StructType
 import org.apache.spark.sql.types.StructField
 import org.apache.spark.sql.types.StringType
 import org.apache.spark.sql.expressions.UserDefinedAggregateFunction

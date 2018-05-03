@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5e5f613-5563-434c-87cc-98fedf6915b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sparkScala/ArrayTransform.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/metastore_db/log/log2.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/sparkScala/ToBitmap.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/db.lck" afterPath="$PROJECT_DIR$/metastore_db/db.lck" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/log/log.ctrl" afterPath="$PROJECT_DIR$/metastore_db/log/log.ctrl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/log/log3.dat" afterPath="$PROJECT_DIR$/metastore_db/log/log3.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/log/logmirror.ctrl" afterPath="$PROJECT_DIR$/metastore_db/log/logmirror.ctrl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/seg0/c180.dat" afterPath="$PROJECT_DIR$/metastore_db/seg0/c180.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/seg0/c191.dat" afterPath="$PROJECT_DIR$/metastore_db/seg0/c191.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/seg0/c1a1.dat" afterPath="$PROJECT_DIR$/metastore_db/seg0/c1a1.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metastore_db/seg0/c1b1.dat" afterPath="$PROJECT_DIR$/metastore_db/seg0/c1b1.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmap.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapInter.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapInter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapMerge.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapMerge.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$$anonfun$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$$anonfun$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$$anonfun$2.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$$anonfun$2.class" />
@@ -20,25 +18,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$Person$.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$Person$.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$Person.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF$Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/BitmapUDAF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$BitmapArrayMerge$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$BitmapArrayMerge$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$StrMerge$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$StrMerge$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$count$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$count$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$inter$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$inter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_array$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_array$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_bitmap$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_bitmap$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_string$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$to_string$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$user$1.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$$anonfun$user$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/Bitmaptransform.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/WeiXin$.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/WeiXin$.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sparkScala/InputToBitmap.class" afterPath="$PROJECT_DIR$/target/classes/sparkScala/InputToBitmap.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BigData.txt" afterPath="$PROJECT_DIR$/BigData.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/derby.log" afterPath="$PROJECT_DIR$/derby.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sparkScala/Bitmap.scala" afterPath="$PROJECT_DIR$/src/sparkScala/Bitmap.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala" afterPath="$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala" afterPath="$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sparkScala/WeiXin.scala" afterPath="$PROJECT_DIR$/src/sparkScala/WeiXin.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/src/target/" />
@@ -52,23 +35,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BitmapUDAF.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BitmapUDAF.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
+            <state relative-caret-position="133">
+              <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
               <folding>
-                <element signature="e#20#56#0" expanded="true" />
+                <element signature="e#20#53#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="udaf.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.1/spark-sql_2.11-2.2.1-sources.jar!/org/apache/spark/sql/expressions/udaf.scala">
+      <file leaf-file-name="FileMerge.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/others/FileMerge.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="60">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -87,8 +70,8 @@
       <file leaf-file-name="Bitmap.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmap.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+            <state relative-caret-position="585">
+              <caret line="40" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#19#35#0" expanded="true" />
               </folding>
@@ -99,7 +82,7 @@
       <file leaf-file-name="BigDataAnalytics.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/BigDataAnalytics.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="45">
               <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
               <folding>
                 <element signature="e#20#69#0" expanded="true" />
@@ -108,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bitmaptransform.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bitmaptransform.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="207" column="87" lean-forward="false" selection-start-line="207" selection-start-column="87" selection-end-line="207" selection-end-column="87" />
+            <state relative-caret-position="3030">
+              <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
               <folding>
                 <element signature="e#20#63#0" expanded="true" />
               </folding>
@@ -123,7 +106,7 @@
       <file leaf-file-name="DataFrameTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/DataFrameTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
+            <state relative-caret-position="75">
               <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
@@ -133,7 +116,7 @@
       <file leaf-file-name="DateTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/others/DateTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="390">
               <caret line="29" column="3" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="29" selection-end-column="3" />
               <folding />
             </state>
@@ -143,7 +126,7 @@
       <file leaf-file-name="FileAnalytics.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/others/FileAnalytics.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="420">
               <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
@@ -153,8 +136,8 @@
       <file leaf-file-name="ArrayTransform.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sparkScala/ArrayTransform.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+            <state relative-caret-position="855">
+              <caret line="59" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="1" />
               <folding>
                 <element signature="e#20#63#0" expanded="true" />
               </folding>
@@ -208,9 +191,9 @@
         <option value="$PROJECT_DIR$/src/sparkScala/WeiXin.scala" />
         <option value="$PROJECT_DIR$/src/sparkScala/Bitmap.scala" />
         <option value="$PROJECT_DIR$/src/sparkScala/ArrayTransform.scala" />
-        <option value="$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala" />
         <option value="$PROJECT_DIR$/BigData.txt" />
         <option value="$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala" />
+        <option value="$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala" />
       </list>
     </option>
   </component>
@@ -251,7 +234,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="799" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -269,9 +252,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,7 +294,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,7 +319,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Bitmaptransform">
+  <component name="RunManager" selected="Application.BitmapUDAF">
     <configuration name="ArrayTransform" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -558,8 +541,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Bitmaptransform" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BitmapUDAF" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BitmapUDAF" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Bitmaptransform" />
         <item index="2" class="java.lang.String" itemvalue="Application.ArrayTransform" />
         <item index="3" class="java.lang.String" itemvalue="Application.WeiXin" />
         <item index="4" class="java.lang.String" itemvalue="Application.BigDataAnalytics" />
@@ -585,35 +568,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="799" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09227468" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38636363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.039772727" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38636363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2556818" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Jelastic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24034335" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39772728" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39772728" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -711,13 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/others/FileMerge.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -831,7 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="49" column="6" lean-forward="false" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4905">
           <caret line="370" column="6" lean-forward="false" selection-start-line="370" selection-start-column="6" selection-end-line="370" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,7 +821,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11175">
           <caret line="801" column="6" lean-forward="false" selection-start-line="801" selection-start-column="6" selection-end-line="801" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27555">
           <caret line="1890" column="6" lean-forward="false" selection-start-line="1890" selection-start-column="6" selection-end-line="1890" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,42 +836,21 @@
         <state relative-caret-position="525">
           <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
           <folding>
-            <element signature="e#21#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmap.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#19#35#0" expanded="true" />
+            <element signature="e#21#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.2.1/spark-sql_2.11-2.2.1-sources.jar!/org/apache/spark/sql/expressions/udaf.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="180">
           <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sparkScala/BigDataAnalytics.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding>
-            <element signature="e#20#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sparkScala/DataFrameTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
+        <state relative-caret-position="75">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
@@ -907,7 +858,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/others/DateTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="390">
           <caret line="29" column="3" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="29" selection-end-column="3" />
           <folding />
         </state>
@@ -915,28 +866,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/others/FileAnalytics.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
+        <state relative-caret-position="420">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala">
+    <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="115" column="77" lean-forward="false" selection-start-line="115" selection-start-column="77" selection-end-line="115" selection-end-column="77" />
+        <state relative-caret-position="3030">
+          <caret line="204" column="13" lean-forward="false" selection-start-line="204" selection-start-column="13" selection-end-line="204" selection-end-column="13" />
           <folding>
-            <element signature="e#20#56#0" expanded="true" />
+            <element signature="e#20#63#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/others/FileMerge.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sparkScala/ArrayTransform.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+        <state relative-caret-position="855">
+          <caret line="59" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="1" />
           <folding>
             <element signature="e#20#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sparkScala/BigDataAnalytics.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding>
+            <element signature="e#20#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmap.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="40" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sparkScala/BitmapUDAF.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="58" column="18" lean-forward="true" selection-start-line="58" selection-start-column="18" selection-end-line="58" selection-end-column="18" />
+          <folding>
+            <element signature="e#20#53#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -946,16 +935,6 @@
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sparkScala/Bitmaptransform.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="207" column="87" lean-forward="false" selection-start-line="207" selection-start-column="87" selection-end-line="207" selection-end-column="87" />
-          <folding>
-            <element signature="e#20#63#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
