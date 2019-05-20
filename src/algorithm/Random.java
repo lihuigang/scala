@@ -1,3 +1,4 @@
+package algorithm;
 // Random class
 //
 // CONSTRUCTION: with (a) no initializer or (b) an integer

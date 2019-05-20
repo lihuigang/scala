@@ -1,3 +1,4 @@
+package algorithm;
 // Treap class
 //
 // CONSTRUCTION: with no initializer

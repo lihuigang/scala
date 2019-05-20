@@ -1,3 +1,4 @@
+package algorithm;
 // Exercise the IntCell class
 public class TestIntCell
 {

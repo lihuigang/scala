@@ -1,5 +1,4 @@
 package algorithm;
-import java.util.Random;
 
 // This includes additional code not in the text that keeps
 // track of the starting and ending points of best sequence
@@ -156,7 +155,7 @@ public final class MaxSumTest
         for( i = 0; totalTime < 4000; i++ )
         {
             for( int j = 0; j < test.length; j++ )
-                test[ j ] = rand.nextInt( 100 ) - 50;
+                //test[ j ] = rand.nextInt( 100 ) - 50;
 
             switch( alg )
             {

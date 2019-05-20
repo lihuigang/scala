@@ -1,6 +1,5 @@
 package algorithm;
 
-import java.util.Random;
 public class Fig10_63
 {
     /**

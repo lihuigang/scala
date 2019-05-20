@@ -1,3 +1,4 @@
+package algorithm;
 // SplayTree class
 //
 // CONSTRUCTION: with no initializer

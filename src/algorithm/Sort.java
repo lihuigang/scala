@@ -1,3 +1,4 @@
+package algorithm;
 /**
  * A class that contains several sorting routines,
  * implemented as static methods.

@@ -1,3 +1,4 @@
+package algorithm;
 public class TestMemoryCell
 {
     public static void main( String [ ] args )
